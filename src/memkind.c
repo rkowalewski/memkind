@@ -628,7 +628,7 @@ static int memkind_tmpfile(const char *dir, size_t size, int *fd, void **addr)
         goto exit;
     }
 
-    (void) unlink(fullname);
+    //(void) unlink(fullname);
     (void) sigprocmask(SIG_SETMASK, &oldset, NULL);
 
     if (ftruncate(*fd, size) != 0) {
